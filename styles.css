@@ -1,0 +1,11 @@
+.div-title {
+  display: grid;
+  place-items: center;
+  height: 100px;
+  background-color: rgb(99, 59, 104);
+  color: rgb(245, 237, 228);
+}
+
+.div-title h1 {
+  margin: 0;
+}
