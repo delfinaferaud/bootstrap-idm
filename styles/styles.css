@@ -34,8 +34,7 @@ main {
   background-color: #bc7a7a;
 }
 
-.accordion p,
-.recetas p {
+.accordion p{
   text-align: justify;
 }
 
