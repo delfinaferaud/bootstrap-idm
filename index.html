@@ -1,185 +1,817 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buscador Recetas Comida</title>
+    <title>Nanu Bakery</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
-    />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <header>
-      <div class="div-title">
-        <h1>Tortas Delfi</h1>
-    </div>
-    <img src="img/shopping-cart.svg" alt="">
+      <nav
+        class="navbar sticky-top navbar-expand-md text-center"
+        data-bs-theme="dark"
+      >
+        <div class="container">
+          <div
+            class="navbar-brand div-title d-flex justify-content-center align-items-center"
+          >
+            <h1>
+              <a href="#" class="text-decoration-none px-3">Nanu Bakery</a>
+            </h1>
+          </div>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#barraNavegacion"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="barraNavegacion">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ancla-tienda">Tienda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ancla-receta">Recetario</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ancla-contacto">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i
+                    class="fa-solid fa-cart-shopping"
+                    style="color: #ffffff"
+                  ></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <main class="mt-5 container-lg">
-      <div class="container text-center">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">
-          <div class="col-md-4 text-center">
-            <div class="card mb-4">
-              <img
-                src="img/lemonpie.jpg"
-                alt="Lemon pie"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h3 class="card-title mb-3">Lemon pie</h3>
-                <h4 class="card-subtitle mb-2 text-body-secondary">$30.000</h4>
-                <p class="card-text">
-                  Tarta de base sablée de vainilla, curd de limón y merengue
-                  italiano.
-                </p>
-                <button class="btn btn-primary w-100">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="card mb-4">
-              <img src="img/brownie.png" alt="Brownie" class="card-img-top" />
-              <div class="card-body">
-                <h3 class="card-title mb-3">Brownie</h3>
-                <h4 class="card-subtitle mb-2 text-body-secondary">$40.000</h4>
-                <p class="card-text">
-                  Torta de brownie de chocolate con dulce de leche repostero y
-                  una capa de crema chantilly.
-                </p>
-                <button class="btn btn-primary w-100">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="card mb-4">
-              <img
-                src="img/cheesecake.jpg"
-                alt="Cheesecake"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h3 class="card-title mb-3">Cheesecake</h3>
-                <h4 class="card-subtitle mb-2 text-body-secondary">$40.000</h4>
-                <p class="card-text">
-                  Torta horneada con base de vainilla, crema de queso y salsa de
-                  frutos rojos.
-                </p>
-                <button class="btn btn-primary w-100">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="card mb-4">
-              <img
-                src="img/chocotorta.jpg"
-                alt="Chocotorta"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h3 class="card-title mb-3">Chocotorta</h3>
-                <h4 class="card-subtitle mb-2 text-body-secondary">$30.000</h4>
-                <p class="card-text">
-                  Postre con capas de galletitas de chocolate y queso crema
-                  mezclado con dulce de leche.
-                </p>
-                <button class="btn btn-primary w-100">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="card mb-4">
-              <img
-                src="img/pastafrola.jpg"
-                alt="Pastafrola"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h3 class="card-title mb-3">Pastafrola</h3>
-                <h4 class="card-subtitle mb-2 text-body-secondary">$25.000</h4>
+    <div class="carousel slide" id="miSlider" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div
+            class="carousel-banner d-flex justify-content-center flex-column align-items-center active cr-slide-1"
+            title="Chocolate"
+          ></div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="carousel-banner d-flex justify-content-center flex-column align-items-center cr-slide-2"
+            title="Cheesecake"
+          ></div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="carousel-banner d-flex justify-content-center flex-column align-items-center cr-slide-3"
+            title="Lemonpie"
+          ></div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#miSlider"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#miSlider"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#miSlider"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#miSlider"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#miSlider"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+    </div>
 
-                <p class="card-text">
-                  Tarta de masa frola con dulce de membrillo.
-                </p>
-                <button class="btn btn-primary w-100">Comprar</button>
+    <main class="mt-4 container-fluid">
+      <div class="container-fluid">
+        <div class="col-md-4 p-0 mb-5 text-center">
+          <div class="accordion d-md-none" id="miAcordionFlush">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#info"
+                >
+                  Sobre Nanu Bakery
+                </button>
+              </h2>
+              <div
+                id="info"
+                class="accordion-collapse collapse"
+                data-bs-parent="#miAcordionFlush"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Nuestro emprendimiento nace del amor por la repostería y la
+                    pasión por endulzar <strong>momentos especiales</strong>.
+                    Nos especializamos en la creación de tortas clásicas,
+                    elaboradas con ingredientes
+                    <strong>frescos y de alta calidad</strong>. En Nanu Bakery
+                    nos dedicamos a cumplir los deseos de nuestros clientes con
+                    productos que no solo son deliciosos, sino también un
+                    deleite para la vista.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="card mb-4">
-              <img
-                src="img/redvelvet.jpg"
-                alt="Red Velvet"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h3 class="card-title mb-3">Red Velvet</h3>
-                <h4 class="card-subtitle mb-2 text-body-secondary">$40.000</h4>
-
-                <p class="card-text">
-                  Torta aterciopelada con frosting de queso.
-                </p>
-                <button class="btn btn-primary w-100">Comprar</button>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#historia"
+                >
+                  Historia
+                </button>
+              </h2>
+              <div
+                id="historia"
+                class="accordion-collapse collapse"
+                data-bs-parent="#miAcordionFlush"
+              >
+                <div class="accordion-body">
+                  <p>
+                    <em>Nanu Bakery</em> comenzó como un pequeño emprendimiento
+                    en 2021, como resultado de meses de práctica y planificación
+                    en plena pandemia. En esos momentos difíciles, el tiempo
+                    libre y la
+                    <strong>necesidad de mantenernos activos</strong> nos
+                    permitieron convertir nuestro hobbie en nuestra nueva
+                    profesión. Lo que empezó como un experimento casero
+                    rápidamente se transformó en una propuesta seria, gracias al
+                    apoyo de familiares, amigos y clientes que confiaron en
+                    nosotros desde el primer día.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="card mb-4">
-              <img src="img/matilda.jpg" alt="Matilda" class="card-img-top" />
-              <div class="card-body">
-                <h3 class="card-title mb-3">Matilda</h3>
-                <h4 class="card-subtitle mb-2 text-body-secondary">$50.000</h4>
-
-                <p class="card-text">
-                  Torta de chocolate con ganache de chocolate.
-                </p>
-                <button class="btn btn-primary w-100">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="card mb-4">
-              <img
-                src="img/carrotcake.jpg"
-                alt="Carrot cake"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h3 class="card-title mb-3">Carrot cake</h3>
-                <h4 class="card-subtitle mb-2 text-body-secondary">$30.000</h4>
-
-                <p class="card-text">
-                  Torta de zanahoria con frosting de queso crema.
-                </p>
-                <button class="btn btn-primary w-100">Comprar</button>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#objetivos"
+                >
+                  Nuestra misión
+                </button>
+              </h2>
+              <div
+                id="objetivos"
+                class="accordion-collapse collapse"
+                data-bs-parent="#miAcordionFlush"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Queremos ser parte de
+                    <strong>tus momentos más importantes</strong>, ofreciendo
+                    tortas que reflejen tus gustos y estilo. Aspiramos a
+                    convertirnos en una referencia en el arte de la repostería y
+                    a seguir incorporando nuevos sabores.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <section class="row mb-5 intro text-center">
+          <div class="col-lg col-md-6 d-none d-md-block">
+            <div class="row">
+              <div class="col-12 titulo">
+                <h2 class="p-2 rounded">Sobre Nanu Bakery</h2>
+              </div>
+              <div class="col-12">
+                <div>
+                  <p>
+                    Nuestro emprendimiento nace del amor por la repostería y la
+                    pasión por endulzar <strong>momentos especiales</strong>.
+                    Nos especializamos en la creación de tortas clásicas,
+                    elaboradas con ingredientes
+                    <strong>frescos y de alta calidad</strong>. En Nanu Bakery
+                    nos dedicamos a cumplir los deseos de nuestros clientes con
+                    productos que no solo son deliciosos, sino también un
+                    deleite para la vista.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg col-md-6 d-none d-md-block">
+            <div class="row">
+              <div class="col-12 titulo">
+                <h2 class="p-2 rounded">Historia</h2>
+              </div>
+              <div class="col-12">
+                <div>
+                  <p>
+                    <em>Nanu Bakery</em> comenzó como un pequeño emprendimiento
+                    en 2021, como resultado de meses de práctica y planificación
+                    en plena pandemia. En esos momentos difíciles, el tiempo
+                    libre y la
+                    <strong>necesidad de mantenernos activos</strong> nos
+                    permitieron convertir nuestro hobbie en nuestra nueva
+                    profesión. Lo que empezó como un experimento casero
+                    rápidamente se transformó en una propuesta seria, gracias al
+                    apoyo de familiares, amigos y clientes que confiaron en
+                    nosotros desde el primer día.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg col-md-6 d-none d-md-block">
+            <div class="row">
+              <div class="col-12 titulo">
+                <h2 class="p-2 rounded">Nuestra misión</h2>
+              </div>
+              <div class="col-12">
+                <div>
+                  <p>
+                    Queremos ser parte de
+                    <strong>tus momentos más importantes</strong>, ofreciendo
+                    tortas que reflejen tus gustos y estilo. Aspiramos a
+                    convertirnos en una referencia en el arte de la repostería y
+                    a seguir incorporando nuevos sabores.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-5 tienda text-center">
+          <h2 class="mb-4 fs-1 fw-bold text-center" id="ancla-tienda">
+            Tienda
+          </h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">
+            <div class="col-md-4 text-center">
+              <div class="card mb-4">
+                <img
+                  src="img/lemonpie.jpg"
+                  alt="Lemon pie"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h3 class="card-title mb-3">Lemon pie</h3>
+                  <h4 class="card-subtitle mb-2 text-body-secondary">
+                    $30.000
+                  </h4>
+                  <p class="card-text">
+                    Tarta de base sablée de vainilla, curd de limón y merengue
+                    italiano.
+                  </p>
+                  <a
+                    href="producto.html"
+                    target="_blank"
+                    class="btn btn-primary w-100"
+                    >Comprar</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="card mb-4">
+                <img src="img/brownie.png" alt="Brownie" class="card-img-top" />
+                <div class="card-body">
+                  <h3 class="card-title mb-3">Brownie</h3>
+                  <h4 class="card-subtitle mb-2 text-body-secondary">
+                    $40.000
+                  </h4>
+                  <p class="card-text">
+                    Torta de brownie de chocolate con dulce de leche repostero y
+                    una capa de crema chantilly.
+                  </p>
+                  <a
+                    href="producto.html"
+                    target="_blank"
+                    class="btn btn-primary w-100"
+                    >Comprar</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="card mb-4">
+                <img
+                  src="img/cheesecake.jpg"
+                  alt="Cheesecake"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h3 class="card-title mb-3">Cheesecake</h3>
+                  <h4 class="card-subtitle mb-2 text-body-secondary">
+                    $40.000
+                  </h4>
+                  <p class="card-text">
+                    Torta horneada con base de vainilla, crema de queso y salsa
+                    de frutos rojos.
+                  </p>
+                  <a
+                    href="producto.html"
+                    target="_blank"
+                    class="btn btn-primary w-100"
+                    >Comprar</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="card mb-4">
+                <img
+                  src="img/chocotorta.jpg"
+                  alt="Chocotorta"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h3 class="card-title mb-3">Chocotorta</h3>
+                  <h4 class="card-subtitle mb-2 text-body-secondary">
+                    $30.000
+                  </h4>
+                  <p class="card-text">
+                    Postre con capas de galletitas de chocolate y queso crema
+                    mezclado con dulce de leche.
+                  </p>
+                  <a
+                    href="producto.html"
+                    target="_blank"
+                    class="btn btn-primary w-100"
+                    >Comprar</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="card mb-4">
+                <img
+                  src="img/pastafrola.jpg"
+                  alt="Pastafrola"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h3 class="card-title mb-3">Pastafrola</h3>
+                  <h4 class="card-subtitle mb-2 text-body-secondary">
+                    $25.000
+                  </h4>
+
+                  <p class="card-text">
+                    Tarta de masa frola con dulce de membrillo.
+                  </p>
+                  <a
+                    href="producto.html"
+                    target="_blank"
+                    class="btn btn-primary w-100"
+                    >Comprar</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="card mb-4">
+                <img
+                  src="img/redvelvet.jpg"
+                  alt="Red Velvet"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h3 class="card-title mb-3">Red Velvet</h3>
+                  <h4 class="card-subtitle mb-2 text-body-secondary">
+                    $40.000
+                  </h4>
+
+                  <p class="card-text">
+                    Torta aterciopelada con frosting de queso.
+                  </p>
+                  <a
+                    href="producto.html"
+                    target="_blank"
+                    class="btn btn-primary w-100"
+                    >Comprar</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="card mb-4">
+                <img src="img/matilda.jpg" alt="Matilda" class="card-img-top" />
+                <div class="card-body">
+                  <h3 class="card-title mb-3">Matilda</h3>
+                  <h4 class="card-subtitle mb-2 text-body-secondary">
+                    $50.000
+                  </h4>
+
+                  <p class="card-text">
+                    Torta de chocolate con ganache de chocolate.
+                  </p>
+                  <a
+                    href="producto.html"
+                    target="_blank"
+                    class="btn btn-primary w-100"
+                    >Comprar</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="card mb-4">
+                <img
+                  src="img/carrotcake.jpg"
+                  alt="Carrot cake"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h3 class="card-title mb-3">Carrot cake</h3>
+                  <h4 class="card-subtitle mb-2 text-body-secondary">
+                    $30.000
+                  </h4>
+
+                  <p class="card-text">
+                    Torta de zanahoria con frosting de queso crema.
+                  </p>
+                  <a
+                    href="producto.html"
+                    target="_blank"
+                    class="btn btn-primary w-100"
+                    >Comprar</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-5 recetas">
+          <div class="row d-flex justify-content-center">
+            <h2 class="mb-4 fw-bold fs-1 text-center" id="ancla-receta">
+              Recetario
+            </h2>
+
+            <div class="text-center row col-lg-12 justify-content-center">
+              <div class="mt-1 mb-3 col-lg">
+                <img
+                  src="img/recetario.webp"
+                  alt="Recetario"
+                  class="mb-2 w-100"
+                />
+              </div>
+
+              <div class="recetario row col-lg">
+                <div class="col-sm-12 col-md-6 col-lg-12">
+                  <p class="fs-5">
+                    Como <strong>lo bueno se comparte</strong>, acá te dejamos
+                    las recetas de nuestras tortas más solicitadas para que te
+                    animes a darle tu <em>toque especial</em>.
+                  </p>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary w-90 fs-6 p-3 mb-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#recetaChoco"
+                  >
+                    Matilda
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary w-90 fs-6 p-3 mb-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#recetaChoco"
+                  >
+                    Lemon pie
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary w-90 fs-6 p-3 mb-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#recetaChoco"
+                  >
+                    Cheesecake
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary w-90 fs-6 p-3 mb-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#recetaChoco"
+                  >
+                    Brownie
+                  </button>
+
+                  <div
+                    class="modal fade"
+                    id="recetaChoco"
+                    tabindex="-1"
+                    aria-labelledby="recetaChocoLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content text-start">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="recetaChocoLabel">
+                            Receta de torta Matilda
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="d-flex flex-column flex-lg-row gap-3">
+                            <div>
+                              <img
+                                src="img/matilda.jpg"
+                                class="img-thumbnail w-100"
+                                alt="Torta Matilda"
+                              />
+                            </div>
+                            <div class="mb-5">
+                              <h2 class="mb-4 fw-bold">Ingredientes</h2>
+                              <h3>Bizcochuelos</h3>
+                              <ul class="list-group mb-3">
+                                <li class="list-group-item">
+                                  200gr harina 0000
+                                </li>
+                                <li class="list-group-item">
+                                  300gr azúcar impalpable
+                                </li>
+                                <li class="list-group-item">
+                                  60gr cacao amargo
+                                </li>
+                                <li class="list-group-item">
+                                  1 cdta bicarbonato
+                                </li>
+                                <li class="list-group-item">
+                                  1/2 cdta sal fina
+                                </li>
+                                <li class="list-group-item">125ml café</li>
+                                <li class="list-group-item">120ml leche</li>
+                                <li class="list-group-item">2 huevos</li>
+                                <li class="list-group-item">120gr manteca</li>
+                              </ul>
+                              <h3>Crema de chocolate</h3>
+                              <ul class="list-group mb-5">
+                                <li class="list-group-item">
+                                  360gr crema de leche
+                                </li>
+                                <li class="list-group-item">
+                                  320gr azúcar blanca
+                                </li>
+                                <li class="list-group-item">
+                                  35gr cacao amargo
+                                </li>
+                                <li class="list-group-item">
+                                  160gr chocolate cobertura semiamargo
+                                </li>
+                                <li class="list-group-item">
+                                  1/2 cdta sal fina
+                                </li>
+                                <li class="list-group-item">270gr manteca</li>
+                              </ul>
+                              <h2 class="mb-4 fw-bold">Paso a paso</h2>
+                              <h3>Bizcochuelos</h3>
+                              <ol class="list-group list-group-numbered mb-3">
+                                <li class="list-group-item">
+                                  Precalentar el horno a 170°C.
+                                </li>
+                                <li class="list-group-item">
+                                  Preparar 3 tarteras desmoldables de 20cm de
+                                  diámetro con papel manteca en la base.
+                                </li>
+                                <li class="list-group-item">
+                                  Tamizar la harina, el azúcar impalpable, el
+                                  cacao amargo, el bicarbonato y la sal en un
+                                  bol.
+                                </li>
+                                <li class="list-group-item">
+                                  En otro bol o jarrita colocar el café, la
+                                  leche y los huevos. Integrar con batidor de
+                                  alambre. Reservar.
+                                </li>
+                                <li class="list-group-item">
+                                  Añadir la manteca fría cortada en cubitos a
+                                  los secos e integrar hasta formar una
+                                  arenilla.
+                                </li>
+                                <li class="list-group-item">
+                                  Adicionar los líquidos a la preparación.
+                                </li>
+                                <li class="list-group-item">
+                                  Volcar la preparación dividiéndola entre las 3
+                                  tarteras.
+                                </li>
+                                <li class="list-group-item">
+                                  Hornear por 20 minutos o hasta que al
+                                  pincharlo con un palito éste salga seco.
+                                </li>
+                                <li class="list-group-item">
+                                  Dejar enfriar a temperatura ambiente y
+                                  reservar en la heladera.
+                                </li>
+                              </ol>
+                              <h3>Crema de chocolate</h3>
+                              <ol class="list-group list-group-numbered mb-3">
+                                <li class="list-group-item">
+                                  Colocar la crema y el azúcar en una cacerola.
+                                  Integrar.
+                                </li>
+                                <li class="list-group-item">
+                                  Llevar a fuego bajo.
+                                </li>
+                                <li class="list-group-item">
+                                  Una vez que esté caliente, incorporar el cacao
+                                  amargo tamizado. Integrar con batidor de
+                                  alambre.
+                                </li>
+                                <li class="list-group-item">
+                                  Una vez que el chocolate esté integrado, poner
+                                  el fuego fuerte y dejar que hierva sin dejar
+                                  de revolver.
+                                </li>
+                                <li class="list-group-item">
+                                  Una vez que hierva, volcar en un bol con el
+                                  chocolate cobertura previamente picado.
+                                </li>
+                                <li class="list-group-item">
+                                  Esperar a que la crema derrita el chocolate
+                                </li>
+                                <li class="list-group-item">
+                                  Agregar la sal. Integrar con el batidor de
+                                  alambre.
+                                </li>
+                                <li class="list-group-item">
+                                  Esperar que la preparación se enfríe un poco y
+                                  adicionar la manteca pomada. Integrar.
+                                </li>
+                                <li class="list-group-item">
+                                  Reservar en un contenedor. Dejar enfriar a
+                                  temperatura ambiente y reservar en la heladera
+                                  por al menos 6 horas. Antes de usar, dejar que
+                                  atempere un poco.
+                                </li>
+                              </ol>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-dismiss="modal"
+                          >
+                            Cerrar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-12">
+                  <p class="fs-5">
+                    También podés adquirir el recetario completo con los mejores
+                    trucos, tips especiales y recomendaciones para empezar con
+                    <strong>tu propio negocio de repostería</strong>.
+                  </p>
+                  <div class="text-center mt-4">
+                    <button
+                      type="button"
+                      class="btn btn-primary w-90 fs-5 p-3 mb-3"
+                    >
+                      Comprar recetario
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-5 formulario">
+          <h2 class="mb-4 fs-1 fw-bold text-center" id="ancla-contacto">
+            Contacto
+          </h2>
+
+          <form class="row d-md-flex justify-content-center">
+            <div
+              class="mb-3 col-12 col-md-6 form-flex d-md-flex justify-content-between"
+            >
+              <div class="form-inputs">
+                <div class="mb-3">
+                  <label for="inputNombre" class="form-label fs-4"
+                    >Nombre completo</label
+                  >
+                  <input type="text" class="form-control" id="inputNombre" />
+                </div>
+                <div class="mb-3">
+                  <label for="inputTelefono" class="form-label fs-4"
+                    >Celular</label
+                  >
+                  <input type="tel" class="form-control" id="inputTelefono" />
+                </div>
+                <div class="mb-3">
+                  <label for="inputMail" class="form-label fs-4"
+                    >Correo electrónico</label
+                  >
+                  <input type="email" class="form-control" id="inputMail" />
+                </div>
+              </div>
+              <div class="form-textarea">
+                <div class="mb-3">
+                  <label for="inputComentario" class="form-label fs-4"
+                    >Comentario</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="inputComentario"
+                    name="inputComentario"
+                    rows="9"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="d-md-flex justify-content-center">
+              <button type="submit" class="btn btn-primary fs-3 mb-3">
+                Enviar
+              </button>
+            </div>
+          </form>
+        </section>
       </div>
     </main>
 
     <footer>
-      <div class="div-footer">
-        <img src="img/yo.jpg" alt="Delfina" />
+      <div
+        class="div-footer d-sm-flex justify-content-sm-center align-items-sm-center text-center py-3 flex-md-row"
+      >
+        <img src="img/yo.jpg" alt="Delfina" class="img-thumbnail w-25 mx-2" />
         <div class="content-footer">
-          <p>Delfina Feraud</p>
+          <p class="mt-1">Delfina Feraud</p>
           <p>24/03/1998</p>
-          <a href="mailto:delfina.feraud@davinci.edu.ar"
+          <a href="mailto:delfina.feraud@davinci.edu.ar" class="d-block"
             >delfina.feraud@davinci.edu.ar</a
           >
-          <a href="https://www.linkedin.com/in/delfinaferaud/">Linkedin</a>
+          <a href="https://www.linkedin.com/in/delfinaferaud/" class="d-block"
+            >Linkedin</a
+          >
         </div>
       </div>
     </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/0d333ea443.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

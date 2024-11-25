@@ -1,0 +1,234 @@
+@font-face {
+  font-family: comfortaa-bold;
+  src: url(/styles/fonts/Comfortaa-Bold.ttf);
+}
+@font-face {
+  font-family: comfortaa-light;
+  src: url(/styles/fonts/Comfortaa-Light.ttf);
+}
+@font-face {
+  font-family: comfortaa-med;
+  src: url(/styles/fonts/Comfortaa-Medium.ttf);
+}
+@font-face {
+  font-family: comfortaa-regular;
+  src: url(/styles/fonts/Comfortaa-Regular.ttf);
+}
+@font-face {
+  font-family: comfortaa-semi;
+  src: url(/styles/fonts/Comfortaa-SemiBold.ttf);
+}
+
+body {
+  font-family: comfortaa-regular, Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.navbar {
+  background-color: #bc7a7a;
+}
+
+.accordion p,
+.recetas p {
+  text-align: justify;
+}
+
+.tienda h2,
+.recetas h2,
+.formulario h2 {
+  color: #bc7a7a;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+#inputComentario {
+  border: 1px solid #bc7a7a;
+  resize: none;
+}
+
+.div-title {
+  background-color: #bc7a7a;
+  color: #ffffff;
+  height: 100px;
+}
+
+.btn.btn-primary {
+  background-color: #bc7a7a;
+  border-color: #bc7a7a;
+}
+
+.btn.btn-primary:active {
+  background-color: #ffffff;
+  border-color: #bc7a7a;
+  color: #bc7a7a;
+}
+
+.btn.btn-primary a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn.btn-primary:active a {
+  color: #bc7a7a;
+  text-decoration: none;
+}
+
+.div-title h1 {
+  margin: 0;
+}
+
+h1 a {
+  color: #ffffff;
+}
+
+.div-footer {
+  background-color: #bc7a7a;
+  color: #ffffff;
+}
+
+.div-footer a {
+  color: rgb(214, 209, 245);
+}
+
+.carousel-banner > div {
+  display: none;
+}
+
+.carousel-banner > img {
+  max-width: 50%;
+  filter: drop-shadow(2px 2px 5px black);
+  opacity: 0.5;
+}
+
+.carousel-banner {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cr-slide-1 {
+  background-image: url(/img/slider/tortachoco.webp);
+  background-position: 20% 30%;
+}
+
+.cr-slide-2 {
+  background-image: url('/img/slider/cheese.webp');
+  background-position: 20% 60%;
+}
+
+.cr-slide-3 {
+  background-image: url('/img/slider/lemonpie.webp');
+  background-position: 40% 50%;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+  background-color: #bc7a7a;
+  font-family: comfortaa-med, Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+#producto h1 {
+  font-family: comfortaa-bold;
+}
+
+#producto,
+#pago {
+  text-align: left;
+}
+
+button[type='submit'] {
+  width: 100%;
+}
+
+footer img {
+  width: 250px;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-banner {
+    height: 300px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 30px;
+  }
+
+  .carousel-banner > img {
+    max-width: 20%;
+    opacity: 0.5;
+  }
+
+  .carousel-banner > div {
+    display: block;
+  }
+
+  .cr-slide-1 {
+    background-position: 20% 30%;
+  }
+
+  .cr-slide-2 {
+    background-position: 20% 60%;
+  }
+
+  #ficha {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #producto,
+  #pago {
+    width: 48%;
+    text-align: left;
+  }
+
+  .titulo h2 {
+    background-color: #bc7a7a;
+  }
+
+  .intro p {
+    text-align: justify;
+  }
+
+  .intro h2 {
+    color: #ffffff;
+  }
+
+  .form-flex {
+    width: 70%;
+  }
+
+  .form-flex .form-inputs,
+  .form-textarea {
+    width: 48%;
+  }
+
+  button[type='submit'] {
+    width: 30%;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-banner {
+    height: 400px;
+  }
+
+  .btn.btn-primary:hover a {
+    color: #bc7a7a;
+    text-decoration: none;
+  }
+
+  .btn.btn-primary:hover {
+    background-color: #ffffff;
+    border-color: #bc7a7a;
+    color: #bc7a7a;
+  }
+}
